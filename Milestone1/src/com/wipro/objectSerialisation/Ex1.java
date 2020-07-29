@@ -28,11 +28,11 @@ package com.wipro.objectserialisation;
 			emp.setSalary(sc.nextDouble());
 			sc.nextLine();
 			
-			FileOutputStream fos = new FileOutputStream("OutObject.txt");
+			FileOutputStream fos = new FileOutputStream("data.txt");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(emp);
 			
-			FileInputStream fis = new FileInputStream("OutObject.txt");
+			FileInputStream fis = new FileInputStream("data.txt");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			Employee emp2 = (Employee) ois.readObject();
 			
